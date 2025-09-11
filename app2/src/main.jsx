@@ -5,7 +5,7 @@ import {Canvas} from "@react-three/fiber"
 import Scene from './Scene'
 import Custom from './Custom'
 const createdCanvasHandler = (state)=>{
-    state.gl.setClearColor("yellow" , 0.6);
+    state.gl.setClearColor("black" , 0.6);
   };
 
 createRoot(document.getElementById('root')).render(
