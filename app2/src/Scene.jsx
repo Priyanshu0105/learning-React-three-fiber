@@ -8,13 +8,15 @@ import { OrbitControls} from "@react-three/drei";
 const Scene = () =>{
     const boxRef = useRef();
     useFrame((state,delta)=>{
-        // boxRef.current.rotation.x +=delta;
-        state.camera.position.x = Math.sin(state.clock.elapsedTime)
+        boxRef.current.rotation.y +=delta;
+        // state.camera.position.x = Math.sin(state.clock.elapsedTime)
     });
     return(
     <>
 
-    {/* <OrbitControls/> */}
+    <OrbitControls/>
+    {/* <axesHelper args={[3]} />
+    <gridHelper/> */}
     <mesh ref={boxRef} >
         <boxGeometry/>
         <meshNormalMaterial side ={THREE.DoubleSide} />
